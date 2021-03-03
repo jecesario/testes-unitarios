@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 
 @Entity
-public class Contato {
+public class Contatos {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,10 +22,10 @@ public class Contato {
 	@NotEmpty(message = "O nome deve ser preenchido")
 	private String nome;
 
-	public Contato() {
+	public Contatos() {
 	}
 
-	public Contato(String ddd, String telefone, String nome) {
+	public Contatos(String ddd, String telefone, String nome) {
 		this.ddd = ddd;
 		this.telefone = telefone;
 		this.nome = nome;
