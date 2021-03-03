@@ -49,4 +49,13 @@ public class ContatosRepositoryIntegrationTest {
 		contatoRepository.save(contato);
 	}
 
+	@Test
+	public void salvarComNomeNulo() throws Exception {
+		esperadaExcecao.expect(ConstraintViolationException.class);
+		esperadaExcecao.expectMessage("O Nome deve ser preenchido");
+
+		contato.setNome(null);
+		contatoRepository.save(contato);
+	}
+
 }
